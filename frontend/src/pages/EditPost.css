@@ -1,0 +1,36 @@
+.edit-post-page {
+  padding: 40px 0 80px;
+  max-width: 700px;
+}
+
+.edit-post-page h1 { font-size: 1.6rem; font-weight: 800; margin-bottom: 6px; }
+.edit-sub { color: var(--text3); font-size: 0.875rem; margin-bottom: 32px; }
+
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.edit-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.form-hint {
+  font-size: 0.75rem;
+  color: var(--text3);
+  margin-top: 4px;
+}
+
+.edit-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  padding-top: 8px;
+}
+
+@media (max-width: 480px) {
+  .edit-row { grid-template-columns: 1fr; }
+}
