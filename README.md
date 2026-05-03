@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🎓 CampusGuid – PVG College Campus Placement Experience Portal
 
 A full-stack MERN application for sharing and discovering authentic campus placement & internship experiences at PVG College.
@@ -259,3 +260,6 @@ npm start
 ## 👨‍💻 Made for PVG College
 
 Built with ❤️ to help PVG students ace their placements.
+=======
+# Campus-Guide
+>>>>>>> 7bcce37950fd683732d4eb846c5a9bccd4b3ca15
