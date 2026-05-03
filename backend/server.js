@@ -38,11 +38,23 @@ app.use('/api/auth/', authLimiter);
 
 // CORS
 app.use(cors({
-  origin: [
-    process.env.FRONTEND_URL,
-    'http://localhost:3000',
-    'https://campus-guide-iota.vercel.app',
-  ].filter(Boolean),
+  origin: function(origin, callback) {
+    const allowed = [
+      'http://localhost:3000',
+      'https://campus-guide-iota.vercel.app',
+      'https://campus-guide.vercel.app',
+      process.env.FRONTEND_URL,
+    ].filter(Boolean).map(u => u.replace(/\/$/, '')); // remove trailing slash
+
+    const cleanOrigin = origin ? origin.replace(/\/$/, '') : '';
+
+    if (!origin || allowed.includes(cleanOrigin)) {
+      callback(null, true);
+    } else {
+      console.log('CORS blocked:', origin);
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
   allowedHeaders: ['Content-Type', 'Authorization']
