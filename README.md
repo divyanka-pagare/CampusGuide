@@ -119,12 +119,13 @@ NODE_ENV=development
 FRONTEND_URL=http://localhost:3000
 ```
 
-### 3. Create Admin User
+<!-- ### 3. Create Admin User
 
 After starting the server, register with your PVG email, then manually update your role in MongoDB Atlas:
 ```
-Database → campusguid → users → find your doc → set role: "admin"
-```
+Database → campusguid → users → find your doc → set role: "admin" 
+-->
+
 
 ### 4. Run Locally
 
